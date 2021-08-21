@@ -143,7 +143,7 @@
 //               className={button}
 //             >
 //               <Next
-//                 viewBox="0 0 20 38"c
+//                 viewBox="0 0 20 38"
 //                 height="2.38em"
 //                 width="1.25em"
 //               />
