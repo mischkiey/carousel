@@ -11,6 +11,7 @@
 // // Images & SVGs
 // import { ReactComponent as Previous } from './images/carousel/previous.svg';
 // import { ReactComponent as Next } from './images/carousel/next.svg';
+//
 
 // // Credits to: https://codesandbox.io/s/carousel-from-scratch-y2ony?file=/src/index.js
 // export default function Carousel({ children, ...props }) {
