@@ -8,8 +8,9 @@ import Slot from './Slot/Slot';
 
 // Types
 import { BeltProps } from './Belt.d';
+import { CarouselConfig } from '../Carousel.d';
 
-export default function Belt({ children, ...props }: BeltProps) {
+export default function Belt({ children, ...props }: BeltProps & CarouselConfig) {
   const { root, wrapper } = useStyles(props);
 
   const { calcOrder, position } = props;

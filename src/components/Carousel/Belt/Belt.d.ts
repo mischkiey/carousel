@@ -1,6 +1,4 @@
-import { CarouselConfig } from '../Carousel.d';
-
-export interface BeltProps extends CarouselConfig {
+export interface BeltProps {
   children: JSX.Element[];
   calcOrder: (number) => number;
 }

@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 // Types
 import { BeltProps } from './Belt.d';
+import { CarouselConfig } from '../Carousel.d';
 
 export const useStyles = makeStyles({
   root: {
@@ -14,7 +15,7 @@ export const useStyles = makeStyles({
     height: 'fit-content',
     overflow: 'visible',
     width: '100%',
-    transform: ({ direction, transition }: BeltProps ) => {
+    transform: ({ direction, transition }: Omit<BeltProps, 'children'> & CarouselConfig) => {
       if (!transition) {
         return `translateX(-100%)`;
       }
@@ -25,7 +26,7 @@ export const useStyles = makeStyles({
 
       return `translateX(0%)`;
     },
-    transition: ({ transition }: BeltProps) => transition
+    transition: ({ transition }: Omit<BeltProps, 'children'> & CarouselConfig) => transition
       ? 'none'
       : 'transform 1s ease',
   },

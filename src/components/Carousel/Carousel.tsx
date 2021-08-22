@@ -30,7 +30,7 @@ export default function Carousel({ children, ...props }: {children: JSX.Element[
     position: 0,
     transition: false,
 
-    // Yet to be implemented
+    // To be implemented
     autoplay: false,
     timerId: null,
   });
