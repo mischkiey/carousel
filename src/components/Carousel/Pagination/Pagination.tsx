@@ -5,7 +5,10 @@ import clsx from 'clsx';
 // Components
 import { Grid, Typography } from '@material-ui/core';
 
-export default function Pagination(props) {
+// Types
+import { PaginationProps } from './Pagination.d';
+
+export default function Pagination(props: PaginationProps) {
   const { 
     root,
     sliderContainer,

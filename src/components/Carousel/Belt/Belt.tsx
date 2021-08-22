@@ -4,18 +4,17 @@ import clsx from 'clsx';
 
 // Components
 import { Grid } from '@material-ui/core';
-import Slot from '../Slot/Slot';
+import Slot from './Slot/Slot';
 
-export default function Belt({ children, ...props }) {
-  const { 
-    root,
-    wrapper,
-    border,
-  } = useStyles(props);
+// Types
+import { BeltProps } from './Belt.d';
+
+export default function Belt({ children, ...props }: BeltProps) {
+  const { root, wrapper } = useStyles(props);
 
   const { calcOrder, position } = props;
 
-  function renderSlots(children) {
+  function renderSlots(children: JSX.Element[]) {
     return children.map((child, idx) => (
       <Slot
         key={idx}
@@ -41,7 +40,6 @@ export default function Belt({ children, ...props }) {
           wrapper,
           'belt-root',
           'belt-margin',
-          border,
         )}
       >
         {renderSlots(children)}

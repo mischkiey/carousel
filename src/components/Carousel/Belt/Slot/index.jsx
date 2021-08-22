@@ -1,2 +1,2 @@
 export { default } from './Slot';
-export * from './Slot.d';
+export * from './Slot';

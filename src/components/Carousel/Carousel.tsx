@@ -12,8 +12,11 @@ import Pagination from './Pagination';
 import { ReactComponent as Previous } from './images/carousel/previous.svg';
 import { ReactComponent as Next } from './images/carousel/next.svg';
 
+// Typess
+import { CarouselConfig } from './Carousel.d';
+
 // Credits to: https://codesandbox.io/s/carousel-from-scratch-y2ony?file=/src/index.js
-export default function Carousel({ children, ...props }) {
+export default function Carousel({ children, ...props }: {children: JSX.Element[]}) {
   const { 
     root,
     wrapper,
@@ -22,7 +25,7 @@ export default function Carousel({ children, ...props }) {
     button,
   } = useStyles({children, ...props});
 
-  const [config, setConfig] = useState({
+  const [config, setConfig] = useState<CarouselConfig>({
     direction: '',
     position: 0,
     transition: false,
@@ -32,7 +35,7 @@ export default function Carousel({ children, ...props }) {
     timerId: null,
   });
 
-  function slide(direction, position) {
+  function slide(direction: string, position: number): void {
     setConfig(config => ({
       ...config,
       direction,
@@ -48,18 +51,7 @@ export default function Carousel({ children, ...props }) {
     }, 500);
   }
 
-  /**
-   * Calculates the flex order of a Slot component
-   * to simulate a carousel/looping effect.
-   * Called for all Slot components (see Belt component).
-   * A Slot component with an [array] index
-   * that matches the current position
-   * gets an order value of 0.
-   * The order values of everything to this Slot component's right
-   * gets incremented by 1
-   * and vice versa.
-   */
-  function calcOrder(index) {
+  function calcOrder(index: number) {
     const { position } = config;
 
     if ((index - position) < 0) {

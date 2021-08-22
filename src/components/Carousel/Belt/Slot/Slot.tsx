@@ -5,8 +5,11 @@ import clsx from 'clsx';
 // Components
 import { Grid } from '@material-ui/core';
 
-export default function Slot({ children, ...props }) {
-  const { root, border } = useStyles(props);
+// Types
+import { SlotProps } from './Slot.d';
+
+export default function Slot({ children, ...props }: SlotProps) {
+  const { root } = useStyles(props);
 
   return (
     <Grid
@@ -15,7 +18,6 @@ export default function Slot({ children, ...props }) {
         root,
         'slot-root',
         'slot-margin',
-        border,
       )}
     >
       {children}
