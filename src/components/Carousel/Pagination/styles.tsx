@@ -31,13 +31,17 @@ export const useStyles = makeStyles({
     width: ({ length }: PaginationProps) => `calc(100%/${length})`,
 
     '&::before': {
-      color: '#eb2127',
-      content: '"•"',
+      backgroundColor: '#eb2127',
+      border: '1px solid #eb2127',
+      borderRadius: '50%',
+      content: '""',
+      height: '0.25em',
       lineHeight: 1,
       position: 'absolute',
       top: 0,
       left: '50%',
       transform: 'translate(-50%, -50%)',
+      width: '0.25em',
     },
   },
 

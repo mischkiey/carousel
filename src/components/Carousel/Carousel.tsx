@@ -9,8 +9,8 @@ import Belt from './Belt';
 import Pagination from './Pagination';
 
 // Images & SVGs
-import { ReactComponent as Previous } from './images/carousel/previous.svg';
-import { ReactComponent as Next } from './images/carousel/next.svg';
+import { ReactComponent as Previous } from '../../assets/previous.svg';
+import { ReactComponent as Next } from '../../assets/next.svg';
 
 // Typess
 import { CarouselConfig } from './Carousel.d';
