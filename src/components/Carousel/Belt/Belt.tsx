@@ -40,7 +40,6 @@ export default function Belt({ children, ...props }: BeltProps & CarouselConfig)
         className={clsx(
           wrapper,
           'belt-root',
-          'belt-margin',
         )}
       >
         {renderSlots(children)}

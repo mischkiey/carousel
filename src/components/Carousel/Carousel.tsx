@@ -88,7 +88,6 @@ export default function Carousel({ children, ...props }: {children: JSX.Element[
       className={clsx(
         root,
         'carousel-root',
-        'carousel-margin',
       )}
     >
       <Grid
